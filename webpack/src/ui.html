@@ -1,0 +1,127 @@
+<!-- 面板上的提示消息 -->
+<div style="padding-left: 10; padding-right: 10;">
+  <div class="onboarding-tip">
+    <div class="icon icon--alert" style="opacity: 0.5;"></div>
+    <div class="onboarding-tip__msg" id="msgBox">onboarding-tip</div>
+  </div>
+</div>
+
+<!--  -->
+<div class="section-title">组标题</div>
+<div style="padding-left: 10; padding-right: 10;">
+  <!-- 主要 -->
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <!-- 点击按钮 会在figma里弹出toast提示 -->
+    <button class="button button--primary" id="btnShowToast" title="点我，弹toast">按钮</button>
+    <button class="button button--primary-destructive">按钮</button>
+    <button class="button button--primary" disabled>按钮</button>
+  </div>
+
+  <!-- 次要 -->
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <button class="button button--secondary">按钮</button>
+    <button class="button button--secondary-destructive">按钮</button>
+    <button class="button button--secondary" disabled>按钮</button>
+  </div>
+
+  <!-- 第三 (超链接样式 按钮) -->
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <button class="button button--tertiary">Label</button>
+    <button class="button button--tertiary-destructive">Label</button>
+    <button class="button button--tertiary" disabled>Label</button>
+  </div>
+
+  <!-- 图标按钮 -->
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <div class="icon-button" title="图标按钮">
+      <div class="icon icon--blend"></div>
+    </div>
+    <!-- 选中样式 -->
+    <div class="icon-button icon-button--selected" title="图标按钮">
+      <div class="icon icon--blend"></div>
+    </div>
+  </div>
+
+  <!-- 输入框 -->
+  <div class="input">
+    <input type="input" class="input__field" style="width: 200px;" placeholder="输入提示" title="输入框提示（tooltips）">
+  </div>
+
+  <div style="display: flex;flex-direction: row;">
+    <div class="input input--with-icon">
+      <div class="icon">W</div>
+      <input type="input" class="input__field" value="100" style="width: 86px;">
+    </div>
+    <div class="input input--with-icon">
+      <div class="icon">H</div>
+      <input type="input" class="input__field" value="100" style="width: 86px;">
+    </div>
+    <div class="icon-button">
+      <div class="icon icon--link-broken"></div>
+    </div>
+  </div>
+  <div style="display: flex;flex-direction: row;">
+    <div class="input input--with-icon">
+      <div class="icon icon--angle"></div>
+      <input type="input" class="input__field" value="0°" style="width: 86px;">
+    </div>
+    <div class="input input--with-icon">
+      <div class="icon icon--corner-radius"></div>
+      <input type="input" class="input__field" value="0" style="width: 86px;">
+    </div>
+    <div class="icon-button">
+      <div class="icon icon--corners"></div>
+    </div>
+  </div>
+
+  <!-- 勾选框 -->
+  <div class="checkbox">
+    <input id="alignCheckbox" type="checkbox" class="checkbox__box" checked>
+    <label for="alignCheckbox" class="checkbox__label">勾选框</label>
+  </div>
+</div>
+<HR style="border:1 dashed #ffffff" width="100%" color=#e5e5e5 size=1>
+
+<div class="section-title">其他</div>
+<div style="padding-left: 10;">
+  <!-- 下拉菜单，需要对应js 做初始化 -->
+  <select id="uniqueId" class="select-menu">
+    <option value="1" >菜单 1</option>
+    <option value="2" >菜单 2</option>
+    <option value="3" >菜单 3</option>
+  </select>
+
+  <!-- 折叠 需要对应js 做初始化 -->
+  <ul class="disclosure">
+    <li class="disclosure__item disclosure--expanded">
+      <div class="disclosure__label disclosure--section">折叠1</div> <!-- This item is styled as a section -->
+      <div class="disclosure__content">
+        <!-- 此处的输入框等 无法点击和交互，目前，还没找解决方法 -->
+        <div class="input input--with-icon">
+          <div class="icon">W</div>
+          <input type="input" class="input__field" value="100" style="width: 100px;">
+        </div>
+      </div>
+    </li>
+
+    <li class="disclosure__item">
+      <div class="disclosure__label">折叠2</div>
+      <div class="disclosure__content">在这放入内容2</div>
+    </li>
+
+    <li class="disclosure__item">
+      <div class="disclosure__label">折叠3</div>
+      <div class="disclosure__content">在这放入内容3</div>
+    </li>
+  </ul>
+</div>
+
+
+<!--  -->
+<!-- figma-plugin-ds 样式 和 脚本支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/figma-plugin-ds.css">
+<script src="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/iife/figma-plugin-ds.js"></script>
+<script>
+    selectMenu.init(); //initiates the select menu component
+    disclosure.init(); //initiates the disclosure component
+</script> -->
